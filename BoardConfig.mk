@@ -14,14 +14,14 @@
 # limitations under the License.
 #
 
-TARGET_OTA_ASSERT_DEVICE := hero2lteskt,hero2ltektt,hero2ltelgt,hero2ltexx,hero2lte
+TARGET_OTA_ASSERT_DEVICE := heroltexx,herolte,hero2ltelgt,hero2ltexx,hero2lte
 
-HERO2_PATH := device/samsung/hero2ltexx
+HERO_PATH := device/samsung/heroltexx
 
 BOARD_VENDOR := samsung
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := $(HERO2_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(HERO_PATH)/include
 
 # Architecture
 TARGET_ARCH := arm64
@@ -42,8 +42,8 @@ ENABLE_CPUSETS := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(HERO2_PATH)/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := $(HERO2_PATH)/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(HERO_PATH)/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := $(HERO_PATH)/bluetooth/libbt_vndcfg.txt
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
@@ -68,7 +68,7 @@ EXTENDED_FONT_FOOTPRINT := true
 TARGET_INIT_VENDOR_LIB := libinit_sec
 TARGET_UNIFIED_DEVICE := true
 
-#TARGET_RELEASETOOLS_EXTENSIONS := $(HERO2_PATH)
+#TARGET_RELEASETOOLS_EXTENSIONS := $(HERO_PATH)
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -77,9 +77,9 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x10008000 --ramdisk_offset 0x11000000 --tags_offset 0x10000100 --dt $(HERO2_PATH)/dtb.img
-TARGET_KERNEL_CONFIG := cyanogenmod_hero2lteskt_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/hero2ltexx
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x10008000 --ramdisk_offset 0x11000000 --tags_offset 0x10000100 --dt $(HERO_PATH)/dtb.img
+TARGET_KERNEL_CONFIG := exynos8890-herolte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/heroltexx
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 # Lights
@@ -98,7 +98,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4300570624
 #BOARD_USERDATAIMAGE_PARTITION_SIZE := 26800832512 #32GB
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(HERO2_PATH)/rootdir/etc/fstab.samsungexynos8890
+TARGET_RECOVERY_FSTAB := $(HERO_PATH)/rootdir/etc/fstab.samsungexynos8890
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
@@ -106,7 +106,7 @@ TARGET_SLSI_VARIANT := blobs
 COMMON_GLOBAL_CFLAGS += -DEXYNOS5_ENHANCEMENTS
 
 # Radio
-BOARD_RIL_CLASS := ../../../$(HERO2_PATH)/ril
+BOARD_RIL_CLASS := ../../../$(HERO_PATH)/ril
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -140,4 +140,4 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/etc/wifi/bcmdhd_apsta.bin"
 WIFI_BAND                        := 802_11_ABG
 
 # inherit from the proprietary version
--include vendor/samsung/hero2ltexx/BoardConfigVendor.mk
+-include vendor/samsung/heroltexx/BoardConfigVendor.mk
