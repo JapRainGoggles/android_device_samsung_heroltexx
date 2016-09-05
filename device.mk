@@ -14,15 +14,15 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/hero2ltexx
+LOCAL_PATH := device/samsung/heroltexx
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/hero2ltexx/hero2ltexx-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/heroltexx/heroltexx-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/hero2ltexx/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/heroltexx/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
