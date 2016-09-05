@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VENDOR=samsung
-DEVICE=hero2ltexx
+DEVICE=heroltexx
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
@@ -12,7 +12,7 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$ `; do
         mkdir -p $BASE/$DIR
     fi
     adb pull /system/$FILE $BASE/$FILE
-    #cp /work/Work/G7Edge/system/$FILE $BASE/$FILE
+    #cp /work/Work/G7/system/$FILE $BASE/$FILE
 done
 
 ./setup-makefiles.sh
