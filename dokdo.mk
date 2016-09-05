@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/samsung/hero2ltexx/full_hero2ltexx.mk)
+$(call inherit-product, device/samsung/heroltexx/full_heroltexx.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/dokdo/config/nfc_enhanced.mk)
@@ -22,5 +22,5 @@ $(call inherit-product, vendor/dokdo/config/nfc_enhanced.mk)
 # Inherit common Dokdo phone.
 $(call inherit-product, vendor/dokdo/config/common_full_phone.mk)
 
-PRODUCT_DEVICE := hero2ltexx
-PRODUCT_NAME := dokdo_hero2ltexx
+PRODUCT_DEVICE := heroltexx
+PRODUCT_NAME := dokdo_heroltexx
