@@ -78,7 +78,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x10008000 --ramdisk_offset 0x11000000 --tags_offset 0x10000100 --dt $(HERO_PATH)/dtb.img
-TARGET_KERNEL_CONFIG := exynos8890-herolte_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_heroltexx_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/heroltexx
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
